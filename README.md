@@ -1,0 +1,2 @@
+# EP.U3D.LIBRARY.I18N
+I18N module.
