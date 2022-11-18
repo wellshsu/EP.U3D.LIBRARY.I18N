@@ -11,11 +11,13 @@ namespace EP.U3D.LIBRARY.I18N
         {
             foreach (string path in importedAssets)
             {
+                if (path.StartsWith("Packages/")) return;
                 if (path.EndsWith(".prefab")) CheckText(path);
             }
-            for (int i = 0; i < movedAssets.Length; i++)
+            foreach (string path in movedAssets)
             {
-                if (movedAssets[i].EndsWith(".prefab")) CheckText(movedAssets[i]);
+                if (path.StartsWith("Packages/")) return;
+                if (path.EndsWith(".prefab")) CheckText(path);
             }
         }
 
